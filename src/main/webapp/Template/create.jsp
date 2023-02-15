@@ -21,12 +21,11 @@
 	try {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection connectSQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/template_db", "root", "Love@funjai_gr");
+		Connection connectSQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/template_db", "root", "Love,@funjai_gr");
 		Statement st = connectSQL.createStatement();
 		
-		st.executeUpdate("insert into member_info(first_name,middle_name,last_name) values('" + first_name + "','" + last_name + "','" + email_address + "','" + contact_number + "')");
+		st.executeUpdate("insert into user_info_tbl(first_name,last_name,email_address,contact_number) values('" + first_name + "','" + last_name + "','" + email_address + "','" + contact_number + "')");
 		
-		response.sendRedirect("retrieve.jsp");
 		out.println("<h1>Record added.</h1>");
 		
 	}
