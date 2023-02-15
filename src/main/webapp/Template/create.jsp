@@ -1,48 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@page import="java.io.*"%>
+<%@page import="java.sql.*"%>    
+    
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-
-<title>Home</title>
-
-<link rel="stylesheet" href="styles.css">
+<title>Creator</title>
 </head>
 <body>
 
-<!--  This is the form  -->
-
-<form class="box" id="CreateBox">
-
-	<div class="field">
-		<label class="label">First Name</label>
-		<div class="control">
-		<input class="input" type="text" placeholder="First Name" required>
-		</div>
-	</div>
+<%
+	String first_name = request.getParameter("first_name");
+	String last_name = request.getParameter("last_name");
+	String email_address = request.getParameter("email_address");
+	String contact_number = request.getParameter("contact_number");
 	
-	<div class="field">
-		<label class="label">Last Name</label>
-		<div class="control">
-		<input class="input" type="text" placeholder="Last Name" required>
-	</div>
-	
-	<div class="field">
-		<label class="label">Email</label>
-	</div>
+	try {
 		
-	<div class="field" id="CreateSubmit">
-		<div class="control">
-		<button class="button is-link">Submit</button>
-		</div>
-	</div>
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection connectSQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/template_db", "root", "Love@funjai_gr");
+		Statement st = connectSQL.createStatement();
+		
+		st.executeUpdate("insert into member_info(first_name,middle_name,last_name) values('" + first_name + "','" + last_name + "','" + email_address + "','" + contact_number + "')");
+		
+		response.sendRedirect("retrieve.jsp");
+		out.println("<h1>Record added.</h1>");
+		
+	}
 	
-	</div>
+	catch (Exception e) {
+		
+		out.println("Error.");
+		
+	}
+%>
 
-</form>
 
 </body>
 </html>
