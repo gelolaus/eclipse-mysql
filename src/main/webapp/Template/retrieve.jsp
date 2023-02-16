@@ -19,6 +19,9 @@
 </head>
 
 <body>
+
+<div class="box" id="retrievebox">
+
 <table class="table is-bordered is-striped">
 
 		<thead>
@@ -28,6 +31,8 @@
 			<th><abbr title="Last Name">LNM</abbr></th>
 			<th><abbr title="Email Address">EML</abbr></th>
 			<th><abbr title="Contact Number">CON</abbr></th>
+			<th>Update</th>
+			<th>Delete</th>
 			</tr>
 		</thead>
 
@@ -62,15 +67,18 @@
 			
 %>
 
-
+		<tbody>
 			<tr class="active-row">
 			<td><%=resultSet.getString("user_id") %></td>
 			<td><%=resultSet.getString("first_name") %></td>
 			<td><%=resultSet.getString("last_name") %></td>
 			<td><%=resultSet.getString("email_address") %></td>
 			<td><%=resultSet.getString("contact_number") %></td>
-	
-	</table>
+			<td><a href=""><button class="button is-success">Update</button></a></td>
+			<td><a href="delete.jsp?member_id=<%=resultSet.getString("user_id")%>"><button class="button is-danger">Delete</button></a></td>
+			</tr>
+		</tbody>
+
 			
 			
 <%
@@ -89,8 +97,9 @@
 
 
 <!-- This is the table -->
-	
-	<div class="box"></div>
+
+	</table>
+	</div>
 
 </body>
 
