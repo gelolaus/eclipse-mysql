@@ -16,7 +16,6 @@ body {
 	margin: 0px;
 	overflow: hidden;
 	
-	
 }
 
 #indexbox {
@@ -36,6 +35,14 @@ body {
 }
 
 #retrievebox {
+	
+	display: block;
+	width: 44%;
+	margin: auto;
+	
+}
+
+#updatebox {
 	
 	display: block;
 	width: 44%;
