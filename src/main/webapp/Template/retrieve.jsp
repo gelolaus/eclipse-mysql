@@ -20,9 +20,9 @@
 
 <body>
 
-<div class="box" id="retrievebox">
+<div class="box" id="retrievebox" style="overflow-y:auto;">
 
-<table class="table is-bordered is-striped">
+<table class="table is-bordered is-striped block" style="width: 100%;">
 
 		<thead>
 			<tr>
@@ -99,6 +99,19 @@
 <!-- This is the table -->
 
 	</table>
+	
+		<div class="">
+		
+			<div class="block">
+				<a href="form.jsp"><button class="button is-success" style="width: 100%;'">Add a new record</button></a>
+			</div>
+		
+			<div class="block">
+				<a href="index.jsp"><button class="button is-danger" style="width: 100%;'">Go home</button></a>
+			</div>
+			
+		</div>
+		
 	</div>
 
 </body>
