@@ -32,29 +32,32 @@
 	</div>
 	
 	<div class="field" style="padding-top: 12px;">
-		<label class="label">Email</label>
+		<label class="label">Email Address</label>
 		<div class="control">
 		<input class="input" type="email" placeholder="Email Address" id="email_address"name="email_address" required>
 		</div>
 	</div>
 	
 		<div class="field">
-		<label class="label">Contact</label>
+		<label class="label">Contact Number</label>
 		<div class="control">
 		<input class="input" type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" required>
 		</div>
 	</div>
 		
 	<div class="field is-grouped" style="padding-top: 2%;">
+	
 		<div class="control">
 		<button class="button is-success" type="submit">Submit</button>
 		</div>
-				<div class="control">
+	
+		<div class="control">
 		<a href="index.jsp"><button class="button is-danger" type="button">Cancel</button></a>
 		</div>
+		
 	</div>
 	
-	</div>
+</div>
 
 </form>
 
