@@ -16,7 +16,7 @@
 
 <!--  This is the form  -->
 
-<form method="POST" action="create.jsp" class="box" id="CreateBox">
+<form method="POST" action="create.jsp" class="box" id="createbox">
 
 	<div class="field">
 		<label class="label">First Name</label>
@@ -47,10 +47,10 @@
 		
 	<div class="field is-grouped" style="padding-top: 2%;">
 		<div class="control">
-		<button class="button is-success">Submit</button>
+		<button class="button is-success" type="submit">Submit</button>
 		</div>
 				<div class="control">
-		<button class="button is-danger">Cancel</button>
+		<a href="index.jsp"><button class="button is-danger" type="button">Cancel</button></a>
 		</div>
 	</div>
 	
