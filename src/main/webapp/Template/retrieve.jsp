@@ -74,7 +74,7 @@
 			<td><%=resultSet.getString("last_name") %></td>
 			<td><%=resultSet.getString("email_address") %></td>
 			<td><%=resultSet.getString("contact_number") %></td>
-			<td><a href=""><button class="button is-success">Update</button></a></td>
+			<td><a href="update.jsp?user_id=<%=resultSet.getString("user_id")%>"><button class="button is-success">Update</button></a></td>
 			<td><a href="delete.jsp?user_id=<%=resultSet.getString("user_id")%>"><button class="button is-danger">Delete</button></a></td>
 			</tr>
 		</tbody>
