@@ -26,3 +26,11 @@ form {
 	margin: auto;
 	
 }
+
+#createbox {
+	
+	display: flex;
+	width: 40%;
+	margin: auto;
+	
+}
