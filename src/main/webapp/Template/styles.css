@@ -19,25 +19,25 @@ body {
 	
 }
 
-form {
+#indexbox {
 	
-	display: flex;
-	width: 40%;
+	display: block;
+	width: 44%;
 	margin: auto;
 	
 }
 
 #createbox {
 	
-	display: flex;
-	width: 40%;
+	display: block;
+	width: 44%;
 	margin: auto;
 	
 }
 
 #retrievebox {
 	
-	display: flex;
+	display: block;
 	width: 44%;
 	margin: auto;
 	
