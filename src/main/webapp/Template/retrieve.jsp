@@ -1,12 +1,97 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<title>Retriever</title>
+
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+<table class="table is-bordered is-striped">
+
+		<thead>
+			<tr>
+			<th><abbr title="User ID">UID</abbr></th>
+			<th><abbr title="First Name">FNM</abbr></th>
+			<th><abbr title="Last Name">LNM</abbr></th>
+			<th><abbr title="Email Address">EML</abbr></th>
+			<th><abbr title="Contact Number">CON</abbr></th>
+			</tr>
+		</thead>
+
+<!-- This is the code -->
+
+<%
+	try {
+		
+		Class.forName("com.mysql.jdbc.Driver");
+		
+	}
+
+	catch (ClassNotFoundException e) {
+		
+		e.printStackTrace();
+		
+	}
+
+	Connection connection = null;
+	Statement statement = null;
+	ResultSet resultSet = null;
+	
+	try {
+		
+		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/template_db","root","Love,@funjai_gr");
+		statement = connection.createStatement();
+		String sql = "SELECT * FROM user_info_tbl";
+		
+		resultSet = statement.executeQuery(sql);
+		
+		while(resultSet.next()) {
+			
+%>
+
+
+			<tr class="active-row">
+			<td><%=resultSet.getString("user_id") %></td>
+			<td><%=resultSet.getString("first_name") %></td>
+			<td><%=resultSet.getString("last_name") %></td>
+			<td><%=resultSet.getString("email_address") %></td>
+			<td><%=resultSet.getString("contact_number") %></td>
+	
+	</table>
+			
+			
+<%
+		}
+		
+	}
+	
+	catch (Exception e) {
+		
+		e.printStackTrace();
+		
+	}
+	
+%>
+	
+
+
+<!-- This is the table -->
+	
+	<div class="box"></div>
 
 </body>
+
 </html>
