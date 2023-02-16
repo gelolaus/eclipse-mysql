@@ -21,7 +21,7 @@
 <body>
 
 <%
-int id = Integer.parseInt(request.getParameter("user_id"));
+String id = request.getParameter("user_id");
 
 	try {
 		
@@ -48,9 +48,9 @@ int id = Integer.parseInt(request.getParameter("user_id"));
 <form method="POST" action="updated.jsp" class="box" id="updatebox">
 
 	<div class="field">
-		<label class="label">User ID</label>
+		<label class="label">User ID = <%=resultSet.getString("user_id") %></label>
 		<div class="control">
-		<input class="input" type="text" placeholder="User ID" name="user_id" value="<%=resultSet.getString("user_id") %>" disabled>
+		<input class="input" type="hidden" placeholder="User ID" name="user_id" value="<%=resultSet.getString("user_id") %>">
 		</div>
 	</div>
 	
@@ -83,7 +83,7 @@ int id = Integer.parseInt(request.getParameter("user_id"));
 	</div>
 	
 	<div class="field is-grouped" style="padding-top: 2%;">
-	
+		
 		<div class="control">
 		<button class="button is-success" type="submit">Submit</button>
 		</div>
