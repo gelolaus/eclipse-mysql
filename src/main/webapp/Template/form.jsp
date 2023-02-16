@@ -2,15 +2,16 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
+	<title>Form</title>
 
-<title>Form</title>
-
-<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <!--  This is the form  -->
@@ -44,7 +45,7 @@
 		</div>
 	</div>
 		
-	<div class="field is-grouped" id="CreateSubmit" style="padding-top: 2%;">
+	<div class="field is-grouped" style="padding-top: 2%;">
 		<div class="control">
 		<button class="button is-success">Submit</button>
 		</div>
