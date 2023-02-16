@@ -45,15 +45,15 @@
 	}
 %>
 
-	<br>
-	<br>
-
-	<div class="field is-grouped" style="padding-top: 6%;">
+	<div class="field is-grouped">
 		<div class="control">
 		<a href="form.jsp"><button class="button is-success">Add again</button></a>
 		</div>
 		<div class="control">
-		<a href=""><button class="button is-light">Go home</button></a>
+		<a href="retrieve.jsp"><button class="button is-info">View records</button></a>
+		</div>
+		<div class="control">
+		<a href="index.jsp"><button class="button is-light">Go home</button></a>
 		</div>
 	</div>
 	
