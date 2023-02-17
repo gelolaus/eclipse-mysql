@@ -16,6 +16,36 @@
 	<title>Retriever</title>
 
 	<link rel="stylesheet" href="styles.css">
+	
+	<style>
+	
+	body {
+	
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0px;
+	overflow: hidden;
+	
+	}
+	
+	@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+	
+	</style>
+	
 </head>
 
 <body>
